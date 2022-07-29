@@ -1,0 +1,26 @@
+[
+    {
+        "roomno": "101",
+        "class": "full"
+    },
+    {
+        "roomno": "102",
+        "class": "empty"
+    },
+    {
+        "roomno": "103",
+        "class": "full"
+    },
+    {
+        "roomno": "104",
+        "class": "full"
+    },
+    {
+        "roomno": "105",
+        "class": "empty"
+    },
+    {
+        "roomno": "106",
+        "class": "empty"
+    }
+]

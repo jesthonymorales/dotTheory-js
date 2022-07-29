@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>
+        AJAX Basics
+    </title>
+
+    <script>
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'data/rooms.json');
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    let rooms = JSON.parse(xhr.responseText);
+                    let statusHtml = "<ul>";
+                    for (let i = 0; i < rooms.length; i++) {
+                        statusHtml += `<li class='${rooms[i].class}'>${rooms[i].roomno}</li>`;
+                    }
+                    statusHtml += '</ul>';
+                    document.getElementById('roomList').innerHTML = statusHtml;
+                }
+            }
+        }
+
+        xhr.send();
+    </script>
+</head>
+
+<body>
+    <div id="roomList"></div>
+</body>
+
+</html>
